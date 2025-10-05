@@ -118,18 +118,18 @@ const allStories = [
   // 👩‍✈️ PILOT STORY
   {
     id: 4,
-    title: "👩‍✈️ Pilot Asha and the Silent Sky",
+    title: "👩‍✈️ Pilot: PJ and the Silent Sky",
     pages: [
       {
-        text: "Asha loved to fly her fast airplane high in the sky. She carried important supplies to faraway places. She always talked to Air Traffic Control (ATC) on her radio to ensure she flew safely.",
+        text: "PJ loved to fly her fast airplane high in the sky. He carried important supplies to faraway places. He always talked to Air Traffic Control (ATC) on his radio to ensure he flew safely.",
         animation: "plane",
       },
       {
-        text: "Asha's radio sent invisible sound waves up to satellites circling Earth and then down to ATC. It was like a super long phone call! This helped her know where to go and if other planes were nearby.",
+        text: "PJ's radio sent invisible sound waves up to satellites circling Earth and then down to ATC. It was like a super long phone call! This helped him know where to go and if other planes were nearby.",
         animation: "satellite-link",
       },
       {
-        text: "One sunny afternoon, Asha was flying over the ocean. Suddenly, her radio started making strange noises: “ZZZZZT... crackle... ZZZZT!” She couldn’t hear ATC anymore. Her radio was blacked out!",
+        text: "One sunny afternoon, PJ was flying over the ocean. Suddenly, his radio started making strange noises: “ZZZZZT... crackle... ZZZZT!” He couldn’t hear ATC anymore. His radio was blacked out!",
         animation: "radio-error",
       },
       {
@@ -137,15 +137,15 @@ const allStories = [
         animation: "ionosphere",
       },
       {
-        text: "Asha knew this could happen. She quickly checked her other screens. Her GPS was still working, showing her exact spot in the sky! She also knew her route by heart.",
+        text: "PJ knew this could happen. He quickly checked his other screens. His GPS was still working, showing him exact spot in the sky! He also knew his route by heart.",
         animation: "pilot-smart",
       },
       {
-        text: "After a little while, the Sun’s trick faded. The ionosphere settled down, and Asha’s radio became clear again! “Welcome back, Asha!” cheered ATC. She had flown safely, even with the tricky radio.",
+        text: "After a little while, the Sun’s trick faded. The ionosphere settled down, and PJ’s radio became clear again! “Welcome back, PJ!” cheered ATC. He had flown safely, even with the tricky radio.",
         animation: "clear-sky",
       },
       {
-        text: "Asha teaches us that even when things go wrong, like a radio blackout from space weather, it’s important to stay calm and know your plan. Always be ready, and you can handle any surprise!",
+        text: "PJ teaches us that even when things go wrong, like a radio blackout from space weather, it’s important to stay calm and know your plan. Always be ready, and you can handle any surprise!",
         animation: "safe-landing",
       },
     ],
