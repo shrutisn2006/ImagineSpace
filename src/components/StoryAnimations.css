@@ -1,0 +1,30 @@
+.animation-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 180px;
+  font-size: 3rem;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.animated-emojis {
+  animation: float 2s ease-in-out infinite alternate;
+}
+
+@keyframes float {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

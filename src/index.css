@@ -1,0 +1,596 @@
+/* 🌌 ImagineSpace Theme */
+
+/* Base setup */
+body {
+  margin: 0;
+  font-family: "Poppins", "Comic Sans MS", system-ui, sans-serif;
+  background: radial-gradient(circle at 50% 20%, #03045e, #000814, #001d3d);
+  color: #f1faee;
+  min-height: 100vh;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ✨ Stars background effect */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("https://www.transparenttextures.com/patterns/stardust.png");
+  opacity: 0.2;
+  z-index: -1;
+  animation: floatStars 100s linear infinite;
+}
+
+@keyframes floatStars {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 1000px 1000px;
+  }
+}
+
+/* 🌠 Navbar styling */
+nav {
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 20px 30px; /* increased height and padding */
+  display: flex;
+  justify-content: center;
+  align-items: center; /* vertically center links */
+  gap: 25px; /* more space between menu items */
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  border-bottom: 3px solid #00b4d8; /* thicker glowing border */
+  box-shadow: 0 4px 10px rgba(0, 180, 216, 0.25); /* soft outer glow */
+  backdrop-filter: blur(6px); /* glassy look */
+}
+
+nav a {
+  color: #f1faee;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 10px 15px; /* more button-like feel */
+  border-radius: 8px;
+  font-size: 1.1rem;
+  letter-spacing: 0.3px;
+  transition: all 0.25s ease-in-out;
+  position: relative;
+}
+
+/* ✨ Hover animation (glow + underline beam) */
+nav a:hover {
+  background: linear-gradient(90deg, #00b4d8, #48cae4);
+  color: #03045e;
+  transform: scale(1.1);
+  box-shadow: 0 0 12px #00b4d8;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 3px;
+  background: linear-gradient(90deg, #00b4d8, #48cae4);
+  border-radius: 4px;
+  transition: width 0.3s ease-in-out;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* 🌟 Headings and text */
+h1, h2, h3 {
+  color: #ffd60a;
+  text-shadow: 0 0 10px rgba(255, 230, 109, 0.7);
+}
+
+p {
+  color: #caf0f8;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* 🪐 Buttons */
+button,
+a.button-link {
+  background-color: #00b4d8;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 0 10px rgba(0, 180, 216, 0.7);
+  transition: 0.3s ease-in-out;
+}
+
+button:hover,
+a.button-link:hover {
+  background-color: #48cae4;
+  transform: scale(1.05);
+}
+
+/* 💫 Responsive adjustments */
+@media (max-width: 768px) {
+  nav {
+    flex-wrap: wrap;
+    padding: 15px;
+    gap: 15px;
+  }
+
+  nav a {
+    font-size: 1rem;
+    padding: 8px 12px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+}
+/* 🌌 --- Space Card Section (Home Page Enhancements) --- */
+
+/* Card Container Styling */
+.space-card {
+  border-radius: 20px;
+  padding: 40px 35px;
+  flex: 1 1 420px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  backdrop-filter: blur(10px);
+  transform: perspective(600px) rotateX(0deg) rotateY(0deg) scale(1);
+}
+
+/* 💙 Cool (Blue) Theme Card */
+.cool-card {
+  background: linear-gradient(145deg, rgba(0, 20, 40, 0.85), rgba(0, 0, 0, 0.7));
+  border: 2px solid rgba(0, 180, 216, 0.5);
+  box-shadow: 0 0 25px rgba(0, 180, 216, 0.4);
+}
+
+/* 💛 Warm (Yellow) Theme Card */
+.warm-card {
+  background: linear-gradient(145deg, rgba(30, 20, 0, 0.85), rgba(0, 0, 0, 0.7));
+  border: 2px solid rgba(255, 214, 10, 0.5);
+  box-shadow: 0 0 25px rgba(255, 214, 10, 0.4);
+}
+
+/* ✨ Hover Effects — Enlarge + Tilt + Glow */
+.space-card:hover {
+  transform: perspective(600px) rotateX(3deg) rotateY(-3deg) scale(1.05);
+  box-shadow: 0 0 45px rgba(255, 255, 255, 0.25),
+              0 0 30px rgba(0, 180, 216, 0.35);
+  transition: all 0.4s ease;
+}
+
+/* Title Hover Interaction */
+.space-card:hover h2 {
+  transform: scale(1.12);
+  text-shadow: 0 0 25px rgba(255, 214, 10, 0.9),
+               0 0 40px rgba(255, 214, 10, 0.6);
+  transition: all 0.3s ease;
+}
+
+/* Paragraph Hover Interaction */
+.space-card:hover p {
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+}
+
+/* ✨ Buttons inside cards */
+.space-card a {
+  display: inline-block;
+  padding: 14px 26px;
+  margin: 8px;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+  transform: translateY(0);
+}
+
+/* Blue Buttons */
+.space-card a[href*="stories"],
+.space-card a[href*="explore"],
+.space-card a[href*="library"] {
+  background: linear-gradient(145deg, #00b4d8, #0077b6);
+  color: #fff;
+}
+.space-card a[href*="stories"]:hover,
+.space-card a[href*="explore"]:hover,
+.space-card a[href*="library"]:hover {
+  background: linear-gradient(145deg, #48cae4, #00b4d8);
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(0, 180, 216, 0.6);
+}
+
+/* Yellow Buttons */
+.space-card a[href*="quiz"],
+.space-card a[href*="feedback"],
+.space-card a[href*="profile"] {
+  background: linear-gradient(145deg, #ffd60a, #ffb703);
+  color: #03045e;
+}
+.space-card a[href*="quiz"]:hover,
+.space-card a[href*="feedback"]:hover,
+.space-card a[href*="profile"]:hover {
+  background: linear-gradient(145deg, #ffea00, #ffd60a);
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(255, 214, 10, 0.7);
+}
+
+/* 🌠 Glow animation around idle cards (subtle pulse) */
+@keyframes cardGlow {
+  0% {
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.1);
+  }
+  50% {
+    box-shadow: 0 0 35px rgba(0, 180, 216, 0.25);
+  }
+  100% {
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.1);
+  }
+}
+.space-card {
+  animation: cardGlow 6s ease-in-out infinite alternate;
+}
+/* 🧠 Quiz Page Layout */
+.quiz-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 90vh;
+  text-align: center;
+  padding: 40px 20px;
+  color: #caf0f8;
+}
+
+/* 🌟 Quiz Title */
+.quiz-container h1 {
+  font-size: 3.3rem; /* increased slightly */
+  color: #ffd60a;
+  text-shadow: 0 0 12px rgba(255, 230, 109, 0.8);
+  margin-bottom: 25px;
+}
+
+/* ✨ Question Styling */
+.quiz-container h2 {
+  font-size: 1.8rem; /* slightly larger */
+  color: #f8f9fa;
+  margin-bottom: 25px;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
+}
+
+/* 🚀 Options styling */
+.options {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 25px;
+}
+
+.quiz-option {
+  background-color: #00b4d8;
+  border: none;
+  padding: 14px 30px; /* increased slightly */
+  border-radius: 12px;
+  color: white;
+  font-size: 1.05rem; /* bump up font size */
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 12px rgba(0, 180, 216, 0.7);
+}
+
+.quiz-option:hover {
+  transform: scale(1.1);
+  background-color: #48cae4;
+}
+
+/* ✅ Correct / ❌ Wrong feedback */
+.correct {
+  background-color: #06d6a0 !important;
+  box-shadow: 0 0 18px #06d6a0;
+}
+
+.wrong {
+  background-color: #ef476f !important;
+  box-shadow: 0 0 18px #ef476f;
+}
+
+/* 📊 Progress text */
+.progress {
+  font-size: 1.1rem;
+  color: #90e0ef;
+  margin-top: 10px;
+}
+
+/* 🏁 Result styling */
+.result {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 40px;
+  border-radius: 18px;
+  border: 2px solid #00b4d8;
+  box-shadow: 0 0 25px rgba(0, 180, 216, 0.6);
+}
+
+.result h2 {
+  color: #ffd60a;
+  margin-bottom: 25px;
+  font-size: 1.6rem;
+}
+
+.restart-btn {
+  background-color: #00b4d8;
+  color: white;
+  padding: 14px 30px;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.05rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.restart-btn:hover {
+  background-color: #48cae4;
+  transform: scale(1.1);
+}
+
+/* 💬 Feedback Page */
+.feedback-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 90vh;
+  text-align: center;
+  color: #caf0f8;
+}
+
+.feedback-box {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 40px 50px;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(0, 180, 216, 0.5);
+  width: 80%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.feedback-box h1 {
+  color: #ffd60a;
+  font-size: 3.3rem;
+  text-shadow: 0 0 15px rgba(255, 230, 109, 0.8);
+  margin-bottom: 10px;
+}
+
+.feedback-box p {
+  color: #ade8f4;
+  font-size: 1.7rem;
+  margin-bottom: 20px;
+}
+
+.feedback-box textarea {
+  width: 100%;
+  height: 120px;
+  border: none;
+  border-radius: 12px;
+  padding: 15px;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #f1faee;
+  resize: none;
+  box-shadow: 0 0 15px rgba(0, 180, 216, 0.6);
+  transition: all 0.3s ease;
+}
+
+.feedback-box textarea:focus {
+  outline: 2px solid #00b4d8;
+  transform: scale(1.02);
+}
+
+.feedback-box button {
+  margin-top: 25px;
+  background-color: #00b4d8;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 0 15px rgba(0, 180, 216, 0.7);
+}
+
+.feedback-box button:hover {
+  background-color: #48cae4;
+  transform: scale(1.1);
+}
+
+/* ✨ Thank You Message */
+.thankyou-box {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 40px 50px;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(255, 230, 109, 0.5);
+  color: #ffd60a;
+  width: 80%;
+  max-width: 600px;
+}
+
+.thankyou-box h2 {
+  font-size: 3rem;
+  text-shadow: 0 0 12px gold;
+}
+
+.thankyou-box button {
+  margin-top: 25px;
+  background-color: #00b4d8;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.thankyou-box button:hover {
+  background-color: #48cae4;
+  transform: scale(1.1);
+}
+
+
+/* 🌌 STORY LIBRARY STYLING */
+.story-library {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 100vh;
+  color: #fff;
+}
+
+.story-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+/* 🎴 Story Card Base */
+.story-card {
+  width: 190px;
+  height: 160px;
+  border-radius: 14px;
+  background: rgba(0, 0, 0, 0.8);
+  box-shadow: 0 0 15px rgba(0, 180, 216, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ✨ Card Title */
+.story-card h3 {
+  margin: 0;
+  font-size: 1.3rem;
+  color: #fff;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+/* 💬 Status Text */
+.story-status {
+  margin-top: 8px;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+/* 🌟 Completed */
+.completed {
+  border: 2px solid #00ffcc;
+  box-shadow: 0 0 15px #00ffcc;
+  animation: pulseGlow 2s infinite ease-in-out;
+}
+.completed .story-status {
+  color: #00ffcc;
+}
+
+/* ⚙️ In Progress */
+.in-progress {
+  border: 2px solid #ffd60a;
+  box-shadow: 0 0 15px rgba(255, 214, 10, 0.4);
+}
+.in-progress .story-status {
+  color: #ffd60a;
+}
+
+/* 🔒 Locked */
+.locked {
+  border: 2px solid #444;
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.locked .story-status {
+  color: #888;
+}
+
+/* 🔮 Hover Animation for Unlocked */
+.story-card:not(.locked):hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 25px rgba(0, 180, 216, 0.8);
+}
+
+/* 🧊 Subtle Hover for Locked Cards */
+.story-card.locked:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
+}
+
+/* 🌠 Pulse Animation for Completed */
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 15px #00ffcc;
+  }
+  50% {
+    box-shadow: 0 0 25px #00ffcc;
+  }
+}
+
+/* 🎮 Button Section */
+.story-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.story-buttons button {
+  background-color: #00b4d8;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  font-weight: bold;
+  box-shadow: 0 0 10px rgba(0, 180, 216, 0.7);
+}
+
+.story-buttons button:hover {
+  background-color: #48cae4;
+  transform: scale(1.05);
+}
