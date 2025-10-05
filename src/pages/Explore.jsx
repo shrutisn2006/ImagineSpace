@@ -62,12 +62,12 @@ const exploreItems = [
     src: "/explore/uranus.jpg",
     desc: "A mysterious icy planet that spins on its side!",
   },
-  {
+  /**{
     title: "Stars of Cepheus",
     type: "video",
     src: "/explore/20190530-SPITZRF-0001-Stars of Cephus~small.mp4",
     desc: "A tour through the bright stars of the Cepheus constellation.",
-  },
+  },**/
 ];
 
 export default function Explore() {
