@@ -45,23 +45,22 @@ export default function Library() {
         📚 My Story Library
       </h1>
 
-      {/* 🪐 Story Cards Row */}
+      {/* 🪐 Story Cards - Vertical Stack */}
       <div
         style={{
           display: "flex",
-          justifyContent: "center",
+          flexDirection: "column",
+          alignItems: "center",
           gap: "25px",
-          flexWrap: "nowrap", // keeps all in one line
-          overflowX: "auto", // allows scroll on smaller screens
-          width: "95%",
-          paddingBottom: "10px",
+          width: "100%",
+          maxWidth: "400px",
         }}
       >
         {stories.map((story) => (
           <div
             key={story.id}
             style={{
-              flex: "0 0 220px", // fixed width per card
+              width: "100%",
               backgroundColor: "rgba(0, 0, 0, 0.6)",
               border: `2px solid ${getStatusColor(story.status)}`,
               borderRadius: "14px",
@@ -74,7 +73,7 @@ export default function Library() {
             }}
             onMouseEnter={(e) => {
               if (story.status !== "Locked") {
-                e.currentTarget.style.transform = "scale(1.08)";
+                e.currentTarget.style.transform = "scale(1.05)";
                 e.currentTarget.style.boxShadow = `0 0 30px ${getStatusColor(
                   story.status
                 )}`;
