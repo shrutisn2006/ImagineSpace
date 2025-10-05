@@ -5,7 +5,7 @@ const stories = [
   { id: 1, title: "👨‍🌾 Ravi and the Sky Storm", category: "Farmer" },
   { id: 2, title: "⚙️ Engineer Sam and the Dancing Sky", category: "Engineer" },
   { id: 3, title: "🧒 Kiran the School Kid and the Lost Signal", category: "Kid" },
-  { id: 4, title: "👩‍✈️ Pilot Asha and the Silent Sky", category: "Pilot" },
+  { id: 4, title: "👩‍✈️ Pilot:PJ and the Silent Sky", category: "Pilot" },
   { id: 5, title: "🧑‍🚀 Astronaut Leeva and the Solar Cloud", category: "Astronaut" },
 ];
 
